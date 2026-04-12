@@ -475,6 +475,7 @@ a {
 .email-contact {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
   gap: 16px;
   max-width: 453px;
   height: 80px;
@@ -489,11 +490,17 @@ color: #fff;
 }
 
 .email-input {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #2e2f42;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   background-color: transparent;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -666,15 +673,16 @@ gap: 16px;
 }
 
 .modal-label {
-  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 4px;
   display: inline-block;
 }
 
+.modal-field-checkbox {
+  margin-bottom: 24px;
+}
 
 .modal-field-wrapper {
   position: relative;
@@ -693,6 +701,10 @@ gap: 16px;
   height: 120px;
   resize: none;
   padding: 8px 16px;
+}
+
+.modal-field-comment {
+  margin-bottom: 16px;
 }
 
 .modal-checkbox-label {
