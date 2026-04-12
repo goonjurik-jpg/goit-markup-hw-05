@@ -40,7 +40,6 @@ img {
 
 a {
   text-decoration: none;
-  display: block;
 }
 
 .section {
@@ -446,8 +445,17 @@ a {
   max-width: 264px;
 }
 
+.container-text {
+  margin-right: 120px;
+}
+
 .footer-logo {
-  margin-bottom: 16px;
+  display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: row;
+gap: 0px;
+margin-bottom: 16px;
 }
 
 .media-text {
@@ -463,8 +471,6 @@ a {
 .footer {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 120px;
 }
 
 .footer-media {
@@ -490,11 +496,10 @@ color: #fff;
 }
 
 .email-input {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #2e2f42;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  color: #f4f4fd;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
@@ -677,7 +682,8 @@ gap: 16px;
   font-size: 12px;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: inline-block;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-field-checkbox {
