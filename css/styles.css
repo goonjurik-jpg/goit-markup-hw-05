@@ -471,6 +471,85 @@ a {
   height: 80px;
 }
 
+.email-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 453px;
+  height: 80px;
+}
+
+.email-title{
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+}
+
+.email-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input:focus,
+.email-input:hover {
+  outline: none;
+  border-color: #31d0aa;
+  box-shadow: 0 0 0 1px #31d0aa;
+}
+
+
+.email-input::placeholder{
+font-weight: 400;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+color: #fff;
+}
+
+.email-form {
+  display: flex;
+  gap: 24px;
+}
+
+.email-button {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+text-align: center;
+color: #fff;
+border-radius: 4px;
+padding: 8px 24px;
+background-color: #4d5ae5;
+border: none;
+min-width: 165px;
+height: 40px;
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0,
+0.2, 1);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+}
+
+.email-button:hover,
+.email-button:focus {
+  background-color: #31d0aa;
+}
+
+.email-icon {
+  fill: white
+}
+
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -491,17 +570,150 @@ a {
   pointer-events: auto;
 }
 
+
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: 100%;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
+    transform: translate(-50%, -50%);
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   border-radius: 4px;
-  transform: translate(-50%, -50%);
+}
+
+
+.modal-close-btw {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  box-shadow: inset 1px rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  fill: #2E2F42;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  max-width: 360px;
+  margin-bottom: 16px;
+  color: #2e2f42;
+}
+
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+}
+
+.modal-input:focus {
+  outline: none;
+  border: 1px solid #4d5ae5;
+  box-shadow: 0 0 0 1px #4d5ae5;
+}
+
+.modal-input:focus + .modal-field-icon {
+  fill: #4d5ae5;
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.modal-label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+
+.modal-field-wrapper {
+  position: relative;
+} 
+
+.modal-field-icon {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2E2F42;
+  position: absolute;
+}
+
+.modal-textarea {
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+}
+
+.modal-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+
+  a {
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+  }
+}
+
+.modal-checkbox-span {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+
+
+.modal-checkbox:checked + .modal-checkbox-label .modal-checkbox-span {
+  background-color: #404bbf;
+  border: 1px solid #404bbf;
+  fill: #f4f4fd;
+}
+
+.modal-checkbox:focus + .modal-checkbox-label .modal-checkbox-span { 
+  border: 1px solid #404bbf;
 }
